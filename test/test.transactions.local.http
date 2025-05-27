@@ -5,7 +5,7 @@ content-type: application/json
     "userId": 1234,
     "fromCurrency": "USD",
     "toCurrency": "EUR",
-    "fromValue": 100
+    "fromValue": 1
 }
 
 ###
