@@ -12,8 +12,7 @@ export class CurrencyService {
     private readonly httpService: HttpService,
     private readonly configService: ConfigService,
   ) {
-    // this.apiKey = this.configService.get<string>('CURRENCY_API_KEY') || '';
-    this.apiKey = 'cur_live_YBIZ5pNf35OPzw6jszr3dMtsYbGtih4uDNg2fsqd'
+    this.apiKey = this.configService.get<string>('CURRENCY_API_KEY') || '';
     if (!this.apiKey) {
       throw new Error('Currency API key not configured');
     }

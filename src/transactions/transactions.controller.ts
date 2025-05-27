@@ -29,7 +29,7 @@ export class TransactionsController {
     );
   }
 
-  @Get('user/:userId')
+  @Get('')
   async getUserTransactions(
     @Query('userId', ParseIntPipe) userId: number,
   ): Promise<Transaction[]> {

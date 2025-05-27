@@ -23,11 +23,6 @@ export class TransactionsService {
       toCurrency,
     );
 
-    console.log("<<<<<<<<<<<<<< Exchange Rate >>>>>>>>>>>>");
-    console.log(`${fromValue}`);
-    console.log("<<<<<<<<<<<<<< Exchange Rate >>>>>>>>>>>>");
-
-
     const toValue = fromValue * rate;
 
     const transaction = this.transactionRepository.create({

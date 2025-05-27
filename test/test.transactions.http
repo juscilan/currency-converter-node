@@ -2,15 +2,15 @@ POST http://localhost:3000/transactions HTTP/1.1
 content-type: application/json
 
 {
-    "userId": 1,
+    "userId": 123,
     "fromCurrency": "BRL",
-    "toCurrency": "USD",
+    "toCurrency": "EUR",
     "fromValue": 100
 }
 
 ###
 
-GET http://localhost:3000/transactions/user?12 HTTP/1.1
+GET http://localhost:3000/transactions/?userId=1 HTTP/1.1
 content-type: application/json
 
 {
