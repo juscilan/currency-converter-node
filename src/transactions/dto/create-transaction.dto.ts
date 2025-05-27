@@ -16,4 +16,5 @@ export class CreateTransactionDto {
   @IsNumber()
   @Min(0.01)
   fromValue: number;
+  
 }

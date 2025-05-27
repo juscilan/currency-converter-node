@@ -1,0 +1,16 @@
+POST https://currency-converter-node.onrender.com/transactions HTTP/1.1
+content-type: application/json
+
+{
+    "userId": 123,
+    "fromCurrency": "USD",
+    "toCurrency": "EUR",
+    "fromValue": 100
+}
+
+###
+
+GET https://currency-converter-node.onrender.com/transactions/?userId=123 HTTP/1.1
+content-type: application/json
+
+

@@ -1,0 +1,16 @@
+POST http://localhost:3000/transactions HTTP/1.1
+content-type: application/json
+
+{
+    "userId": 1234,
+    "fromCurrency": "USD",
+    "toCurrency": "EUR",
+    "fromValue": 100
+}
+
+###
+
+GET http://localhost:3000/transactions/?userId=1234 HTTP/1.1
+content-type: application/json
+
+
