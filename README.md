@@ -1,10 +1,39 @@
 # Node.js/NestJS Currency Convert Challenge
 
-## Running local
-### Makes sure that you are using NodeJS 20 version or latest
+## Features
+- Real-time currency conversion
+- Transaction history tracking
+- REST API endpoints
+- Automated documentation
+- Input validation
+- Comprehensive testing
+
+## Technologies
+- **Framework**: NestJS
+- **ORM**: TypeORM
+- **Database**: SQLite
+- **API Docs**: Swagger UI
+- **Testing**: Jest, Supertest
+
+## Tech Stack
+- **Backend**: NestJS
+- **Database**: TypeORM + SQLite
+- **Docs**: Swagger UI
+- **Testing**: Jest + Supertest
+
+## Installation
+1. Clone repository:
+Make sure that you are using NodeJS 20 version or latest
+```bash
+git clone https://github.com/juscilan/currency-converter-node.git
+cd currency-converter-node
 ```
+2. Install the dependencies:
+````
 npm install
-```
+````
+
+---
 
 ### Create a .env file on app root and add the currencyapi API key 
 ````
@@ -16,14 +45,13 @@ npm run start:dev
 
 ### Manual testing
 #### Install [RestClient](https://marketplace.visualstudio.com/items?itemName=humao.rest-client) on your Visual Studio Code
-navigate to folder ./test/test.transactions.local.http and test it.
+##### (Local) navigate to folder ./test/test.transactions.local.http and test it.
+##### (Online) navigate to folder ./test/test.transactions.remote.http and test it.
 
-### Automatic Testing (unit test and e2e tests)
-#### Run
+### Automatic Testing (unit tests and e2e tests)
 ````
 npm run test:all
 ````
 
-## Live Running on render
+## Live Running on [Render](https://currency-converter-node.onrender.com/transactions?userId=123)
 
-  [Render](https://currency-converter-node.onrender.com/transactions?userId=123)
