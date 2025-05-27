@@ -18,6 +18,7 @@ export class TransactionsService {
     toCurrency: string,
     fromValue: number,
   ): Promise<Transaction> {
+    
     const rate = await this.currencyService.getExchangeRate(
       fromCurrency,
       toCurrency,

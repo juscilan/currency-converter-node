@@ -6,26 +6,27 @@ import {
   Param,
   Query,
   ParseIntPipe,
+  UsePipes,
+  ValidationPipe,
 } from '@nestjs/common';
 import { TransactionsService } from './transactions.service';
 import { Transaction } from './transaction.entity';
+import { CreateTransactionDto } from './dto/create-transaction.dto';
 
 @Controller('transactions')
 export class TransactionsController {
   constructor(private readonly transactionsService: TransactionsService) {}
 
   @Post('')
+  @UsePipes(new ValidationPipe({ transform: true }))
   async createExchange(
-    @Body('userId', ParseIntPipe) userId: number,
-    @Body('fromCurrency') fromCurrency: string,
-    @Body('toCurrency') toCurrency: string,
-    @Body('fromValue') fromValue: number,
-  ): Promise<Transaction> {
+    @Body() createTransactionDto: CreateTransactionDto,
+  ) {
     return this.transactionsService.createExchangeTransaction(
-      userId,
-      fromCurrency,
-      toCurrency,
-      fromValue,
+      createTransactionDto.userId,
+      createTransactionDto.fromCurrency,
+      createTransactionDto.toCurrency,
+      createTransactionDto.fromValue,
     );
   }
 
@@ -35,5 +36,5 @@ export class TransactionsController {
   ): Promise<Transaction[]> {
     return this.transactionsService.getUserTransactions(userId);
   }
-
+  
 }

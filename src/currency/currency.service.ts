@@ -36,26 +36,5 @@ export class CurrencyService {
     const response = await firstValueFrom(this.httpService.get(url));
     return response.data;
   }
-
-  async getHistoricalRates(
-    date: string,
-    baseCurrency: string = 'USD',
-  ): Promise<any> {
-    const url = `${this.baseUrl}/historical?apikey=${this.apiKey}&base_currency=${baseCurrency}&date=${date}`;
-    const response = await firstValueFrom(this.httpService.get(url));
-    return response.data;
-  }
-
-  async convertCurrency(
-    from: string,
-    to: string,
-    amount: number,
-  ): Promise<number> {
-    const rates = await this.getLatestRates(from);
-    const rate = rates.data[to];
-    if (!rate) {
-      throw new Error(`Exchange rate for ${to} not available`);
-    }
-    return amount * rate.value;
-  }
+  
 }

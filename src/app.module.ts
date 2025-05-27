@@ -7,14 +7,14 @@ import { ConfigModule } from '@nestjs/config';
 @Module({
   imports: [
     ConfigModule.forRoot({
-      isGlobal: true,  // Makes ConfigService available across all modules
-      envFilePath: '.env',  // Specify your env file path
+      isGlobal: true,
+      envFilePath: '.env',
     }),
     TypeOrmModule.forRoot({
       type: 'sqlite',
       database: 'database.sqlite',
       entities: [__dirname + '/**/*.entity{.ts,.js}'],
-      synchronize: true, // Only for development
+      synchronize: true,
     }),
     TransactionsModule,
     CurrencyModule,
