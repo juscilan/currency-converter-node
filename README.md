@@ -54,4 +54,5 @@ npm run test:all
 ````
 
 ## Live Running on [Render](https://currency-converter-node.onrender.com/transactions?userId=123)
+## [Swagger Live running](https://currency-converter-node.onrender.com/api)
 
