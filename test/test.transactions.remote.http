@@ -2,10 +2,10 @@ POST https://currency-converter-node.onrender.com/transactions HTTP/1.1
 content-type: application/json
 
 {
-    "userId": 123,
+    "userId": 1234,
     "fromCurrency": "USD",
-    "toCurrency": "EUR",
-    "fromValue": 100
+    "toCurrency": "BRL",
+    "fromValue": 1
 }
 
 ###
